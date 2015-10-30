@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'SwifTumblr_Example', :exclusive => true do
+  pod "SwifTumblr", :path => "../"
+end
+
+target 'SwifTumblr_Tests', :exclusive => true do
+  pod "SwifTumblr", :path => "../"
+
+  pod 'Quick', '~> 0.6.0'
+  pod 'Nimble', '~> 2.0.0'
+end
