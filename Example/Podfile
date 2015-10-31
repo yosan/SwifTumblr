@@ -11,3 +11,8 @@ target 'SwifTumblr_Tests', :exclusive => true do
   pod 'Quick', '~> 0.6.0'
   pod 'Nimble', '~> 2.0.0'
 end
+
+post_install do |installer|
+  `find Pods -regex 'Pods\\/Quick\\/Quick\\/Quick\\.h' -print0 | xargs -0 sed -i '' 's/\\(<\\)Quick\\/\\(.*\\)\\(>\\)/\\"\\2\\"/'`
+  `find Pods -regex 'Pods\\/Nimble\\/Nimble\\/Nimble\\.h' -print0 | xargs -0 sed -i '' 's/\\(<\\)Nimble\\/\\(.*\\)\\(>\\)/\\"\\2\\"/'`
+end
