@@ -40,8 +40,8 @@ class SwifTumblrTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let blog = self.blog, let posts = blog.posts, let ps = posts.posts {
-            return ps.count
+        if let blog = self.blog, let posts = blog.posts {
+            return posts.count
         } else {
             return 0
         }
@@ -50,8 +50,8 @@ class SwifTumblrTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        if let blog = self.blog, let posts = blog.posts, let postArray = posts.posts {
-            cell.textLabel?.text = postArray[indexPath.row].slug
+        if let blog = self.blog, let posts = blog.posts {
+            cell.textLabel?.text = posts[indexPath.row].slug
         }
 
         return cell

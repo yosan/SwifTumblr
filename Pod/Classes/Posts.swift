@@ -13,7 +13,13 @@ public struct Posts {
     
     public let start: Int
     public let total: Int
-    public let posts: [PostProtocol]?
+    
+    private let posts: [PostProtocol]?
+    
+    public var count: Int {
+        guard let posts = posts else { return 0 }
+        return posts.count
+    }
     
     /**
     Parse XML and create posts object.
@@ -33,6 +39,11 @@ public struct Posts {
         } else {
             return nil
         }
+    }
+    
+    public subscript(index: Int) -> PostProtocol {
+        guard let posts = posts where posts.count > index else { fatalError("Out of range") }
+        return posts[index]
     }
     
     private static func parseEachPosts(postsXml: AEXMLElement) -> [PostProtocol] {
