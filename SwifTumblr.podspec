@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwifTumblr"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Fetch and parse tumblr blog."
 
 # This description is used to generate tags and improve search results.
@@ -20,12 +20,10 @@ Pod::Spec.new do |s|
 This library fetch tumblr blog and covert it to Swift objects.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SwifTumblr"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/yosan/SwifTumblr"
   s.license          = 'MIT'
   s.author           = { "yosan" => "taka.yosuke@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SwifTumblr.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/yosan/SwifTumblr.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
@@ -35,9 +33,6 @@ This library fetch tumblr blog and covert it to Swift objects.
     'SwifTumblr' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Alamofire', '~> 3.0'
   s.dependency 'AEXML', '~> 3.0'
 
