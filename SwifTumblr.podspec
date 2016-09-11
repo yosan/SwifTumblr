@@ -38,7 +38,7 @@ This library fetch tumblr blog and covert it to Swift objects.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Alamofire', '~> 3.0.0'
-  s.dependency 'AEXML', '~> 2.0.0'
+  s.dependency 'Alamofire', '~> 3.0'
+  s.dependency 'AEXML', '~> 3.0'
 
 end

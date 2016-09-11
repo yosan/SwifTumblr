@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5929BD2A156AE5E34B1D14 /* Pods_SwifTumblr_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498DFB170460409FDDA3B77 /* Pods_SwifTumblr_Tests.framework */; };
 		1194DF7FDA6563796071A736 /* Pods_SwifTumblr_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE4B552ABDB505B517B0EE7 /* Pods_SwifTumblr_Example.framework */; };
+		2B90AD73228CEA0EF5936537 /* Pods_SwifTumblr_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498DFB170460409FDDA3B77 /* Pods_SwifTumblr_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		26643FCD047F1D02A46F9704 /* Pods-SwifTumblr_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		35DA4F7B268B555E9D0CD157 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		37802561BD47F069C5433C10 /* Pods-SwifTumblr_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwifTumblr_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwifTumblr_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,12 +40,12 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		65971FE31BD2530700CA9197 /* SwifTumblrTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifTumblrTableViewController.swift; sourceTree = "<group>"; };
 		65971FE41BD2530700CA9197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		6FF6618E65C43BDB5FCCB2D9 /* Pods-SwifTumblr_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AE4B552ABDB505B517B0EE7 /* Pods_SwifTumblr_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwifTumblr_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B02F4F01EC1F4F65A41381C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8351D656A13F13B39BA1B0D8 /* Pods-SwifTumblr_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Example/Pods-SwifTumblr_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8CAB9ECDF9023451E33E7697 /* Pods-SwifTumblr_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Example/Pods-SwifTumblr_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B498DFB170460409FDDA3B77 /* Pods_SwifTumblr_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwifTumblr_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7FD05038C4D6F67FEC12A31 /* Pods-SwifTumblr_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D8C3F05EAD73249D050AC480 /* SwifTumblr.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwifTumblr.podspec; path = ../SwifTumblr.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5929BD2A156AE5E34B1D14 /* Pods_SwifTumblr_Tests.framework in Frameworks */,
+				2B90AD73228CEA0EF5936537 /* Pods_SwifTumblr_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +74,8 @@
 			children = (
 				8CAB9ECDF9023451E33E7697 /* Pods-SwifTumblr_Example.debug.xcconfig */,
 				8351D656A13F13B39BA1B0D8 /* Pods-SwifTumblr_Example.release.xcconfig */,
-				6FF6618E65C43BDB5FCCB2D9 /* Pods-SwifTumblr_Tests.debug.xcconfig */,
-				26643FCD047F1D02A46F9704 /* Pods-SwifTumblr_Tests.release.xcconfig */,
+				37802561BD47F069C5433C10 /* Pods-SwifTumblr_Tests.debug.xcconfig */,
+				D7FD05038C4D6F67FEC12A31 /* Pods-SwifTumblr_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -166,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwifTumblr_Example" */;
 			buildPhases = (
-				169E268C532649A06544AE1C /* Check Pods Manifest.lock */,
+				169E268C532649A06544AE1C /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				F5484C1AA956F9AF392B61A2 /* Embed Pods Frameworks */,
-				7BC7B1A6013F47DFA103A59E /* Copy Pods Resources */,
+				F5484C1AA956F9AF392B61A2 /* [CP] Embed Pods Frameworks */,
+				7BC7B1A6013F47DFA103A59E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwifTumblr_Tests" */;
 			buildPhases = (
-				BFFEF550261087E7AD386A80 /* Check Pods Manifest.lock */,
+				D0F7732C16958B038EFB3314 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				EFBBE51B46D234DC984E5997 /* Embed Pods Frameworks */,
-				E696FC5CA79036C93B9D2E13 /* Copy Pods Resources */,
+				92D78BF5DD742C60A5AD25AC /* [CP] Embed Pods Frameworks */,
+				25B149CE77A8768D8253067E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,14 +210,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -262,14 +264,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		169E268C532649A06544AE1C /* Check Pods Manifest.lock */ = {
+		169E268C532649A06544AE1C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,44 +279,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7BC7B1A6013F47DFA103A59E /* Copy Pods Resources */ = {
+		25B149CE77A8768D8253067E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwifTumblr_Example/Pods-SwifTumblr_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFFEF550261087E7AD386A80 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E696FC5CA79036C93B9D2E13 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +294,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EFBBE51B46D234DC984E5997 /* Embed Pods Frameworks */ = {
+		7BC7B1A6013F47DFA103A59E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwifTumblr_Example/Pods-SwifTumblr_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92D78BF5DD742C60A5AD25AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,14 +324,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5484C1AA956F9AF392B61A2 /* Embed Pods Frameworks */ = {
+		D0F7732C16958B038EFB3314 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5484C1AA956F9AF392B61A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,8 +409,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -436,6 +440,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -452,8 +457,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -472,6 +479,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -480,12 +489,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CAB9ECDF9023451E33E7697 /* Pods-SwifTumblr_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwifTumblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -493,18 +504,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8351D656A13F13B39BA1B0D8 /* Pods-SwifTumblr_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwifTumblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FF6618E65C43BDB5FCCB2D9 /* Pods-SwifTumblr_Tests.debug.xcconfig */;
+			baseConfigurationReference = 37802561BD47F069C5433C10 /* Pods-SwifTumblr_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -525,7 +538,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26643FCD047F1D02A46F9704 /* Pods-SwifTumblr_Tests.release.xcconfig */;
+			baseConfigurationReference = D7FD05038C4D6F67FEC12A31 /* Pods-SwifTumblr_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
