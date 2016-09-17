@@ -29,9 +29,6 @@ This library fetch tumblr blog and covert it to Swift objects.
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'SwifTumblr' => ['Pod/Assets/*.png']
-  }
 
   s.dependency 'Alamofire', '~> 4.0'
   s.dependency 'AEXML', '~> 4.0'
