@@ -10,41 +10,46 @@ import Foundation
 import Alamofire
 import AEXML
 
-extension Request {
-
-    public static func BlogResponseSerializer() -> ResponseSerializer<Blog, NSError> {
-        return ResponseSerializer { request, response, data, error in
-            guard error == nil else { return .Failure(error!) }
+extension DataRequest {
+    
+    public static func blogResponseSerializer() -> DataResponseSerializer<Blog> {
+        return DataResponseSerializer(serializeResponse: { (request, response, data, error) -> Result<Blog> in
+            guard error == nil else { return .failure(error!) }
             
             guard let validData = data else {
                 let failureReason = "Data could not be serialized. Input data was nil."
-                let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
-                return .Failure(error)
+                let error = NSError(domain: "jp.yousan.ios.SwifTumblr", code: 100, userInfo: [NSLocalizedFailureReasonErrorKey : failureReason])
+                return .failure(error)
             }
             
             do {
-                let XML = try AEXMLDocument(xmlData: validData)
-                return .Success(Blog(xmlDoc: XML))
-            } catch {
-                return .Failure(error as NSError)
+                let XML = try AEXMLDocument(xml: validData)
+                return .success(Blog(xmlDoc: XML))
+            } catch let error {
+                return .failure(error)
             }
-        }
+        })
     }
     
-    public func responseBlog(completionHandler: Response<Blog, NSError> -> Void) -> Self {
-        return response(responseSerializer: Request.BlogResponseSerializer(), completionHandler: completionHandler)
+    @discardableResult
+    func responseBlog(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<Blog>) -> Void) -> Self
+    {
+        return response(queue: queue, responseSerializer: DataRequest.blogResponseSerializer(), completionHandler: completionHandler)
+//        return response(completionHandler: { (response) in
+//        })
+//        return response(queue: queue, responseSerializer: DataResponse.BlogResponseSerializer(), completionHandler: completionHandler)
     }
-
+    
 }
 
-public func getBlog(URLString URLString: URLStringConvertible, success: (Blog) -> Void, failure: (NSError) -> Void) {
+public func getBlog(URLString: URLConvertible, success: @escaping (Blog) -> Void, failure: @escaping (NSError) -> Void) {
     
-    Alamofire.request(.GET, URLString)
-        .responseBlog { (response: Response<Blog, NSError>) in
+    Alamofire.request(URLString)
+        .responseBlog { (response: DataResponse<Blog>) in
             if let blog = response.result.value {
                 success(blog)
             } else if let error = response.result.error {
-                failure(error)
+                failure(error as NSError)
             }
     }
     

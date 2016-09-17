@@ -17,8 +17,8 @@ public struct PostVideoPlayer {
     public init?(playerXml: AEXMLElement?) {
         guard let playerXml = playerXml else { return nil }
         
-        player = playerXml.stringValue
-        maxWidth = Int(nullableString: playerXml.attributes["max-width"])
+        player = playerXml.string
+        maxWidth = playerXml.attributes["max-width"].flatMap { Int($0) }
     }
     
 }
@@ -27,7 +27,7 @@ extension PostVideoPlayer: CustomDebugStringConvertible {
   
     public var debugDescription: String {
         let properties = ["player:\(player)", "max-width:\(maxWidth)"]
-        return properties.joinWithSeparator("\n")
+        return properties.joined(separator: "\n")
     }
     
 }

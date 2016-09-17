@@ -12,10 +12,10 @@ import AEXML
 public struct PostAudio: PostProtocol {
  
     public let id: String?
-    public let url: NSURL?
-    public let urlWithSlug: NSURL?
+    public let url: URL?
+    public let urlWithSlug: URL?
     public let type: String?
-    public let date: NSDate?
+    public let date: Date?
     public let format: String?
     public let reblogKey: String?
     public let slug: String?
@@ -30,17 +30,17 @@ public struct PostAudio: PostProtocol {
         guard let postXml = postXml else { return nil }
         
         id = postXml.attributes["id"]
-        url = NSURL(nullableString: postXml.attributes["url"])
-        urlWithSlug = NSURL(nullableString: postXml.attributes["url-with-slug"])
+        url = postXml.attributes["url"].flatMap { URL(string: $0) }
+        urlWithSlug = postXml.attributes["url-with-slug"].flatMap { URL(string: $0) }
         type = postXml.attributes["type"]
-        date = NSDate.parse(postXml.attributes["date-gmt"])
+        date = postXml.attributes["date-gmt"].flatMap { Date.parse($0) }
         format = postXml.attributes["format"]
         reblogKey = postXml.attributes["reblog-key"]
         slug = postXml.attributes["slug"]
-        audioCaption = postXml["audio-caption"].stringValue
-        audioPlayer = postXml["audio-player"].stringValue
-        audioEnbed = postXml["audio-enbed"].stringValue
-        id3Title = postXml["id3-title"].stringValue
+        audioCaption = postXml["audio-caption"].string
+        audioPlayer = postXml["audio-player"].string
+        audioEnbed = postXml["audio-enbed"].string
+        id3Title = postXml["id3-title"].string
         tags = postXml.sameElementStrings("tag")
     }
     
@@ -51,9 +51,9 @@ extension PostAudio: CustomDebugStringConvertible {
     public var debugDescription: String {
         var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "audio-caption:\(audioCaption)", "audio-player:\(audioPlayer)", "audio-enbed:\(audioEnbed)", "id3-title:\(id3Title)"]
         if let tags = tags {
-            properties = tags.reduce([String](), combine: { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
+            properties = tags.reduce([String](), { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
         }
-        return properties.joinWithSeparator("\n")
+        return properties.joined(separator: "\n")
     }
     
 }

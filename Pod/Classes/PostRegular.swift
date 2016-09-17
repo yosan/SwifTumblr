@@ -12,10 +12,10 @@ import AEXML
 public struct PostRegular: PostProtocol {
     
     public let id: String?
-    public let url: NSURL?
-    public let urlWithSlug: NSURL?
+    public let url: URL?
+    public let urlWithSlug: URL?
     public let type: String?
-    public let date: NSDate?
+    public let date: Date?
     public let format: String?
     public let reblogKey: String?
     public let slug: String?
@@ -28,15 +28,15 @@ public struct PostRegular: PostProtocol {
         guard let postXml = postXml else { return nil }
         
         id = postXml.attributes["id"]
-        url = NSURL(nullableString: postXml.attributes["url"])
-        urlWithSlug = NSURL(nullableString: postXml.attributes["url-with-slug"])
+        url = postXml.attributes["url"].flatMap { URL(string: $0) }
+        urlWithSlug = postXml.attributes["url-with-slug"].flatMap { URL(string: $0) }
         type = postXml.attributes["type"]
-        date = NSDate.parse(postXml.attributes["date-gmt"])
+        date = postXml.attributes["date-gmt"].flatMap { Date.parse($0) }
         format = postXml.attributes["format"]
         reblogKey = postXml.attributes["reblog-key"]
         slug = postXml.attributes["slug"]
-        regularTitle = postXml["regular-title"].stringValue
-        regularBody = postXml["regular-body"].stringValue
+        regularTitle = postXml["regular-title"].string
+        regularBody = postXml["regular-body"].string
         tags = postXml.sameElementStrings("tag")
     }
     
@@ -47,9 +47,9 @@ extension PostRegular: CustomDebugStringConvertible {
     public var debugDescription: String {
         var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "regular-title:\(regularTitle)", "regular-body:\(regularBody)"]
         if let tags = tags {
-            properties = tags.reduce([String](), combine: { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
+            properties = tags.reduce([String](), { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
         }
-        return properties.joinWithSeparator("\n")
+        return properties.joined(separator: "\n")
     }
     
 }

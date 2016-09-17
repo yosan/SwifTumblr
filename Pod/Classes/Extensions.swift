@@ -9,43 +9,25 @@
 import Foundation
 import AEXML
 
-internal extension NSDate {
+internal extension Date {
     
-    class func parse(dateString: String?) -> NSDate? {
+    static func parse(_ dateString: String?) -> Date? {
         guard let dateString = dateString else { return nil }
         
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm':'ss' 'xxx"
-        formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
-        let d = formatter.dateFromString(dateString)
-        return NSDate(timeInterval: 0, sinceDate: d!)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        let d = formatter.date(from: dateString)
+        return Date(timeInterval: 0, since: d!)
     }
     
 }
 
 internal extension AEXMLElement {
     
-    func sameElementStrings(elementName: String) -> [String]? {
-        return self[elementName].all?.map({ xml in xml.stringValue })
-    }
-    
-}
-
-internal extension NSURL {
-    
-    convenience init?(nullableString: String?) {
-        guard let urlString = nullableString else { return nil }
-        self.init(string: urlString)
-    }
-    
-}
-
-internal extension Int {
-    
-    init?(nullableString: String?) {
-        guard let intString = nullableString else { return nil }
-        self.init(intString)
+    func sameElementStrings(_ elementName: String) -> [String]? {
+        return self[elementName].all?.map({ xml in xml.string })
     }
     
 }

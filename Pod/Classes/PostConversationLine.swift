@@ -20,7 +20,7 @@ public struct PostConversationLine {
 
         name = lineXml.attributes["name"]
         label = lineXml.attributes["label"]
-        line = lineXml.stringValue
+        line = lineXml.string
     }
     
 }
@@ -29,7 +29,7 @@ extension PostConversationLine: CustomDebugStringConvertible {
     
     public var debugDescription: String {
         let properties = ["name:\(name)", "label:\(label)", "line:\(line)"]
-        return properties.joinWithSeparator("\n")
+        return properties.joined(separator: "\n")
     }
 
 }

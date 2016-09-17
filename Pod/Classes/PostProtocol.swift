@@ -12,10 +12,10 @@ import AEXML
 public protocol PostProtocol: CustomDebugStringConvertible {
     
     var id: String? { get }
-    var url: NSURL? { get }
-    var urlWithSlug: NSURL? { get }
+    var url: URL? { get }
+    var urlWithSlug: URL? { get }
     var type: String? { get }
-    var date: NSDate? { get }
+    var date: Date? { get }
     var format: String? { get }
     var reblogKey: String? { get }
     var slug: String? { get }

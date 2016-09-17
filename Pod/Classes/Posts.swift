@@ -14,7 +14,7 @@ public struct Posts {
     public let start: Int
     public let total: Int
     
-    private let posts: [PostProtocol]?
+    fileprivate let posts: [PostProtocol]?
     
     public var count: Int {
         guard let posts = posts else { return 0 }
@@ -42,11 +42,11 @@ public struct Posts {
     }
     
     public subscript(index: Int) -> PostProtocol {
-        guard let posts = posts where posts.count > index else { fatalError("Out of range") }
+        guard let posts = posts , posts.count > index else { fatalError("Out of range") }
         return posts[index]
     }
     
-    private static func parseEachPosts(postsXml: AEXMLElement) -> [PostProtocol] {
+    fileprivate static func parseEachPosts(_ postsXml: AEXMLElement) -> [PostProtocol] {
         var posts = [PostProtocol]()
         for postXml in postsXml.children {
             if let type = postXml.attributes["type"] {
@@ -94,7 +94,7 @@ extension Posts: CustomDebugStringConvertible {
             }
         }
         let properties = ["start:\(start)", "total:\(total)"]
-        return properties.joinWithSeparator("\n") + postsDescriptions
+        return properties.joined(separator: "\n") + postsDescriptions
     }
 
 }

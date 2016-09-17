@@ -22,7 +22,7 @@ public struct Blog {
         self.name = blogElem.attributes["name"]
         self.timezone = blogElem.attributes["timezone"]
         self.title = blogElem.attributes["title"]
-        self.description = blogElem.stringValue
+        self.description = blogElem.string
         self.posts = Posts(postsXml: xmlDoc.root["posts"])
     }
     
@@ -32,7 +32,7 @@ extension Blog: CustomDebugStringConvertible {
     
     public var debugDescription: String {
         let properties = ["name:\(name)", "timezone:\(timezone)", "title:\(title)", "description:\(description)", "posts:\(posts)"]
-        return properties.joinWithSeparator("\n")
+        return properties.joined(separator: "\n")
     }
     
 }

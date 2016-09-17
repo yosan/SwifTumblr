@@ -11,13 +11,13 @@ import AEXML
 
 public struct PostPhotoURL {
     
-    public let photoURL: NSURL?
+    public let photoURL: URL?
     public let maxWidth: Int?
     
     public init?(photoUrlXml: AEXMLElement?) {
         guard let photoUrlXml = photoUrlXml else { return nil }
-        photoURL = NSURL(string: photoUrlXml.stringValue)
-        maxWidth = Int(nullableString: photoUrlXml.attributes["max-width"])
+        photoURL = URL(string: photoUrlXml.string)
+        maxWidth = photoUrlXml.attributes["max-width"].flatMap { Int($0) }
     }
     
 }
@@ -26,7 +26,7 @@ extension PostPhotoURL: CustomDebugStringConvertible {
  
     public var debugDescription: String {
         let properties = ["photoURL:\(photoURL)", "max-width:\(maxWidth)"]
-        return properties.joinWithSeparator("\n")
+        return properties.joined(separator: "\n")
     }
 
 }
