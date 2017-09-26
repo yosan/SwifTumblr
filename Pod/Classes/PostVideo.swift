@@ -47,7 +47,7 @@ public struct PostVideo: PostProtocol {
 extension PostVideo: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "video-source:\(videoSource)", "video-caption:\(videoCaption)"]
+        var properties = ["id:\(String(describing: id))", "url:\(String(describing: url))", "urlWithSlug:\(String(describing: urlWithSlug))", "type:\(String(describing: type))", "date:\(String(describing: date))", "format:\(String(describing: format))", "reblogKey:\(String(describing: reblogKey))", "slug:\(String(describing: slug))", "video-source:\(String(describing: videoSource))", "video-caption:\(String(describing: videoCaption))"]
         if let players = videoPlayers {
             properties = players.reduce([String](), { (pros, player) -> [String] in pros + ["player:\(player)"] })
         }

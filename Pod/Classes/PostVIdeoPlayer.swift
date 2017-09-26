@@ -26,7 +26,7 @@ public struct PostVideoPlayer {
 extension PostVideoPlayer: CustomDebugStringConvertible {
   
     public var debugDescription: String {
-        let properties = ["player:\(player)", "max-width:\(maxWidth)"]
+        let properties = ["player:\(String(describing: player))", "max-width:\(String(describing: maxWidth))"]
         return properties.joined(separator: "\n")
     }
     

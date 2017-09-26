@@ -45,7 +45,7 @@ public struct PostPhoto: PostProtocol {
 extension PostPhoto: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "photo-caption:\(photoCaption)", "photo-link-url:\(photoLinkURL)"]
+        var properties = ["id:\(String(describing: id))", "url:\(String(describing: url))", "urlWithSlug:\(String(describing: urlWithSlug))", "type:\(String(describing: type))", "date:\(String(describing: date))", "format:\(String(describing: format))", "reblogKey:\(String(describing: reblogKey))", "slug:\(String(describing: slug))", "photo-caption:\(String(describing: photoCaption))", "photo-link-url:\(String(describing: photoLinkURL))"]
         if let photoURLs = photoURLs {
             properties = photoURLs.reduce([String](), { (pros, photoURL) -> [String] in pros + ["photo-url:\(photoURL)"] })
         }

@@ -45,7 +45,7 @@ public struct PostRegular: PostProtocol {
 extension PostRegular: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "regular-title:\(regularTitle)", "regular-body:\(regularBody)"]
+        var properties = ["id:\(String(describing: id))", "url:\(String(describing: url))", "urlWithSlug:\(String(describing: urlWithSlug))", "type:\(String(describing: type))", "date:\(String(describing: date))", "format:\(String(describing: format))", "reblogKey:\(String(describing: reblogKey))", "slug:\(String(describing: slug))", "regular-title:\(String(describing: regularTitle))", "regular-body:\(String(describing: regularBody))"]
         if let tags = tags {
             properties = tags.reduce([String](), { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
         }

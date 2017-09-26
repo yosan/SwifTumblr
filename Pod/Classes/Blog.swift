@@ -31,7 +31,7 @@ public struct Blog {
 extension Blog: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        let properties = ["name:\(name)", "timezone:\(timezone)", "title:\(title)", "description:\(description)", "posts:\(posts)"]
+        let properties = ["name:\(String(describing: name))", "timezone:\(String(describing: timezone))", "title:\(String(describing: title))", "description:\(String(describing: description))", "posts:\(String(describing: posts))"]
         return properties.joined(separator: "\n")
     }
     

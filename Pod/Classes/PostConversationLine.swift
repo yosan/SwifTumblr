@@ -28,7 +28,7 @@ public struct PostConversationLine {
 extension PostConversationLine: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        let properties = ["name:\(name)", "label:\(label)", "line:\(line)"]
+        let properties = ["name:\(String(describing: name))", "label:\(String(describing: label))", "line:\(String(describing: line))"]
         return properties.joined(separator: "\n")
     }
 

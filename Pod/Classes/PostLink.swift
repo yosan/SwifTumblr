@@ -47,7 +47,7 @@ public struct PostLink: PostProtocol {
 extension PostLink: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "link-text:\(linkText)", "link-url:\(linkURL)", "link-description:\(linkDescription)"]
+        var properties = ["id:\(String(describing: id))", "url:\(String(describing: url))", "urlWithSlug:\(String(describing: urlWithSlug))", "type:\(String(describing: type))", "date:\(String(describing: date))", "format:\(String(describing: format))", "reblogKey:\(String(describing: reblogKey))", "slug:\(String(describing: slug))", "link-text:\(String(describing: linkText))", "link-url:\(String(describing: linkURL))", "link-description:\(String(describing: linkDescription))"]
         if let tags = tags {
             properties = tags.reduce([String](), { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
         }

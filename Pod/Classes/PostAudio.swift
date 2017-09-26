@@ -49,7 +49,7 @@ public struct PostAudio: PostProtocol {
 extension PostAudio: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "audio-caption:\(audioCaption)", "audio-player:\(audioPlayer)", "audio-enbed:\(audioEnbed)", "id3-title:\(id3Title)"]
+        var properties = ["id:\(String(describing: id))", "url:\(String(describing: url))", "urlWithSlug:\(String(describing: urlWithSlug))", "type:\(String(describing: type))", "date:\(String(describing: date))", "format:\(String(describing: format))", "reblogKey:\(String(describing: reblogKey))", "slug:\(String(describing: slug))", "audio-caption:\(String(describing: audioCaption))", "audio-player:\(String(describing: audioPlayer))", "audio-enbed:\(String(describing: audioEnbed))", "id3-title:\(String(describing: id3Title))"]
         if let tags = tags {
             properties = tags.reduce([String](), { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
         }

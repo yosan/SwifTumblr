@@ -25,7 +25,7 @@ public struct PostPhotoURL {
 extension PostPhotoURL: CustomDebugStringConvertible {
  
     public var debugDescription: String {
-        let properties = ["photoURL:\(photoURL)", "max-width:\(maxWidth)"]
+        let properties = ["photoURL:\(String(describing: photoURL))", "max-width:\(String(describing: maxWidth))"]
         return properties.joined(separator: "\n")
     }
 

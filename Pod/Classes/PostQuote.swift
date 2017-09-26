@@ -45,7 +45,7 @@ public struct PostQuote: PostProtocol {
 extension PostQuote: CustomDebugStringConvertible {
  
     public var debugDescription: String {
-        var properties = ["id:\(id)", "url:\(url)", "urlWithSlug:\(urlWithSlug)", "type:\(type)", "date:\(date)", "format:\(format)", "reblogKey:\(reblogKey)", "slug:\(slug)", "quote-text:\(quoteText)", "quote-source:\(quoteSource)"]
+        var properties = ["id:\(String(describing: id))", "url:\(String(describing: url))", "urlWithSlug:\(String(describing: urlWithSlug))", "type:\(String(describing: type))", "date:\(String(describing: date))", "format:\(String(describing: format))", "reblogKey:\(String(describing: reblogKey))", "slug:\(String(describing: slug))", "quote-text:\(String(describing: quoteText))", "quote-source:\(String(describing: quoteSource))"]
         if let tags = tags {
             properties = tags.reduce([String](), { (pros, tag) -> [String] in pros + ["tag:\(tag)"] })
         }
