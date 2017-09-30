@@ -1,12 +1,15 @@
-language: objective-c
+language: swift
+osx_image: xcode9
+xcode_workspace: Example/SwifTumblr.xcworkspace
+xcode_scheme: SwifTumblr-Example
+xcode_sdk: iphonesimulator11.0
 podfile: Example/Podfile
-osx_image: xcode7.1
 before_install:
     - gem update cocoapods
+    - pod repo update
 before_script:
     - brew unlink xctool
     - brew update || brew update
     - brew install xctool
-xcode_workspace: Example/SwifTumblr.xcworkspace
-xcode_scheme: SwifTumblr-Example
-xcode_sdk: iphonesimulator9.1
+script: xcodebuild -workspace Example/SwifTumblr.xcworkspace -scheme SwifTumblr-Example -sdk iphonesimulator11.0 -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' build test
+
