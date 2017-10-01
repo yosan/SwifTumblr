@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwifTumblr"
-  s.version          = "0.4.0"
+  s.version          = "0.5.0"
   s.summary          = "Fetch and parse tumblr blog."
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ This library fetch tumblr blog and covert it to Swift objects.
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'SwifTumblr/**/*'
 
   s.dependency 'Alamofire', '~> 4.5.0'
   s.dependency 'AEXML', '~> 4.0'

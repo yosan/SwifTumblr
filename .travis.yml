@@ -11,5 +11,5 @@ before_script:
     - brew unlink xctool
     - brew update || brew update
     - brew install xctool
-script: xcodebuild -workspace Example/SwifTumblr.xcworkspace -scheme SwifTumblr-Example -sdk iphonesimulator11.0 -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' build test
+script: xcodebuild -workspace SwifTumblr.xcworkspace -scheme SwifTumblr -sdk iphonesimulator11.0 -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' build test
 
