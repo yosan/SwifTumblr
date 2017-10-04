@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwifTumblr"
-  s.version          = "0.4.0"
+  s.version          = "1.0.0"
   s.summary          = "Fetch and parse tumblr blog."
 
 # This description is used to generate tags and improve search results.
