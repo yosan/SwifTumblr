@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		1194DF7FDA6563796071A736 /* Pods_SwifTumblr_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE4B552ABDB505B517B0EE7 /* Pods_SwifTumblr_Example.framework */; };
 		2B90AD73228CEA0EF5936537 /* Pods_SwifTumblr_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498DFB170460409FDDA3B77 /* Pods_SwifTumblr_Tests.framework */; };
+		3380E3A81F85112C00FDF816 /* SwifTumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3380E3A71F85112C00FDF816 /* SwifTumblrTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		65971FE51BD2530700CA9197 /* SwifTumblrTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65971FE31BD2530700CA9197 /* SwifTumblrTableViewController.swift */; };
 		65971FE61BD2530700CA9197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65971FE41BD2530700CA9197 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3380E3A71F85112C00FDF816 /* SwifTumblrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifTumblrTests.swift; sourceTree = "<group>"; };
 		35DA4F7B268B555E9D0CD157 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		37802561BD47F069C5433C10 /* Pods-SwifTumblr_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwifTumblr_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwifTumblr_Tests/Pods-SwifTumblr_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwifTumblr_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwifTumblr_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +38,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwifTumblr_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwifTumblr_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		65971FE31BD2530700CA9197 /* SwifTumblrTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifTumblrTableViewController.swift; sourceTree = "<group>"; };
 		65971FE41BD2530700CA9197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7AE4B552ABDB505B517B0EE7 /* Pods_SwifTumblr_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwifTumblr_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +126,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				3380E3A71F85112C00FDF816 /* SwifTumblrTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -391,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				3380E3A81F85112C00FDF816 /* SwifTumblrTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
