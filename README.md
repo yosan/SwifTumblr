@@ -26,6 +26,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 9.0+
+- Xcode 9.0+
+- Swift 4.0+
+
 ## Installation
 
 SwifTumblr is available through [CocoaPods](http://cocoapods.org). To install
