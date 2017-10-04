@@ -5,6 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/SwifTumblr.svg?style=flat)](http://cocoapods.org/pods/SwifTumblr)
 [![Platform](https://img.shields.io/cocoapods/p/SwifTumblr.svg?style=flat)](http://cocoapods.org/pods/SwifTumblr)
 
+Simple Tumblr RSS parser by Swift.
+
+```swift
+SwifTumblr.getBlog(
+    URLString: "http://ysn-blog.tumblr.com/api/read",
+    success: { blog in
+        self.blog = blog
+        self.tableView.reloadData()
+    },
+    failure: { error in
+        self.error = error
+    }
+)
+```
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
