@@ -1,15 +1,37 @@
 @startuml
 
-class Blog <> { +name: String? +timezone: String? +title: String? +description: String? +posts: Posts? }
+class Blog <<struct>> {
+  +name: String?
+  +timezone: String?
+  +title: String?
+  +description: String?
+  +posts: Posts?
+}
 
-class Posts <> { +start: Int +total: Int -posts: [PostProtocol]? }
+class Posts <<struct>> {
+  +start: Int
+  +total: Int
+  -posts: [PostProtocol]?
+}
 
-interface PostProtocol { +id: String? +url: URL? }
+interface PostProtocol {
+  +id: String?
+  +url: URL?
+}
 
-class PostRegular <> { +id: String? +url: URL? }
+class PostRegular <<struct>> {
+ +id: String?
+ +url: URL?
+}
 
-class PostPhoto <> { +id: String? +url: URL? }
+class PostPhoto <<struct>> {
+ +id: String?
+ +url: URL?
+}
 
-Blog *- Posts Posts o- PostProtocol PostRegular .> PostProtocol PostPhoto .> PostProtocol
+Blog *- Posts
+Posts o- PostProtocol
+PostRegular .> PostProtocol
+PostPhoto .> PostProtocol
 
 @enduml
