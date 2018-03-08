@@ -39,6 +39,44 @@ it, simply add the following line to your Podfile:
 pod "SwifTumblr"
 ```
 
+## UML
+
+class Blog <<struct>> {
+  +name: String?
+  +timezone: String?
+  +title: String?
+  +description: String?
+  +posts: Posts?
+}
+
+class Posts <<struct>> {
+  +start: Int
+  +total: Int
+  -posts: [PostProtocol]?
+}
+
+interface PostProtocol {
+  +id: String?
+  +url: URL?
+}
+
+class PostRegular <<struct>> {
+ +id: String?
+ +url: URL?
+}
+
+class PostPhoto <<struct>> {
+ +id: String?
+ +url: URL?
+}
+
+Blog *- Posts
+Posts o- PostProtocol
+PostRegular .> PostProtocol
+PostPhoto .> PostProtocol
+
+@enduml
+
 ## Author
 
 yosan, taka.yosuke@gmail.com
