@@ -1,0 +1,15 @@
+@startuml
+
+class Blog <> { +name: String? +timezone: String? +title: String? +description: String? +posts: Posts? }
+
+class Posts <> { +start: Int +total: Int -posts: [PostProtocol]? }
+
+interface PostProtocol { +id: String? +url: URL? }
+
+class PostRegular <> { +id: String? +url: URL? }
+
+class PostPhoto <> { +id: String? +url: URL? }
+
+Blog *- Posts Posts o- PostProtocol PostRegular .> PostProtocol PostPhoto .> PostProtocol
+
+@enduml
