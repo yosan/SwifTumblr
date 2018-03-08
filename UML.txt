@@ -1,6 +1,6 @@
 @startuml
 
-class Blog <<struct>> {
+class Blog {
   +name: String?
   +timezone: String?
   +title: String?
@@ -8,7 +8,7 @@ class Blog <<struct>> {
   +posts: Posts?
 }
 
-class Posts <<struct>> {
+class Posts {
   +start: Int
   +total: Int
   -posts: [PostProtocol]?
@@ -19,12 +19,12 @@ interface PostProtocol {
   +url: URL?
 }
 
-class PostRegular <<struct>> {
+class PostRegular {
  +id: String?
  +url: URL?
 }
 
-class PostPhoto <<struct>> {
+class PostPhoto {
  +id: String?
  +url: URL?
 }
