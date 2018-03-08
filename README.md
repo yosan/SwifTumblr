@@ -41,6 +41,8 @@ pod "SwifTumblr"
 
 ## UML
 
+@startuml
+
 class Blog <<struct>> {
   +name: String?
   +timezone: String?
